@@ -36,7 +36,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 18px 28px;
-  background: rgba(0, 0, 0, 0.58);
+  background: rgba(0, 0, 0, 0.72);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -79,7 +79,6 @@ a {
   height: 2px;
   background: #fff;
   margin: 5px 0;
-  transition: 0.3s ease;
 }
 
 .hero {
@@ -97,13 +96,13 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.78));
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.78));
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  animation: fadeHero 1.4s ease;
+  animation: fadeHero 1.2s ease;
 }
 
 .hero-content h1 {
@@ -153,11 +152,6 @@ a {
   width: 100%;
   border-radius: 18px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
-  transition: transform 0.35s ease;
-}
-
-.bio-image img:hover {
-  transform: scale(1.03);
 }
 
 .eyebrow {
@@ -219,7 +213,6 @@ a {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 22px rgba(212, 175, 55, 0.25);
 }
 
 .luxury {
@@ -274,13 +267,20 @@ footer {
   background: #0b0b0b;
 }
 
-.fade {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease;
+/* visible by default */
+.reveal {
+  opacity: 1;
+  transform: none;
 }
 
-.fade.show {
+/* only animate if JS adds this */
+.js-animate .reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.js-animate .reveal.show {
   opacity: 1;
   transform: translateY(0);
 }
