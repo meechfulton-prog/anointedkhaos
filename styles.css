@@ -1,0 +1,132 @@
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:#0d0d0d;
+  color:#f5f5f5;
+}
+
+/* NAV */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(12px);
+  position:sticky;
+  top:0;
+}
+
+.navbar h1{
+  font-family:'Playfair Display';
+  letter-spacing:2px;
+}
+
+.navbar a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero img{
+  width:90%;
+  max-width:400px;
+  border-radius:12px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:30px;
+  background:white;
+  color:black;
+  text-decoration:none;
+  margin-top:20px;
+}
+
+.btn.luxury{
+  background:linear-gradient(45deg,#d4af37,#f5e6b3);
+}
+
+/* SECTION */
+.section{
+  padding:80px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border-radius:12px;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+/* EXPERIENCE */
+.experience{
+  text-align:center;
+  padding:60px;
+}
+
+.experience img{
+  width:90%;
+  max-width:600px;
+  margin:10px;
+  border-radius:12px;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:80px 20px;
+  background:#111;
+}
+
+.phone{
+  margin-top:10px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+}
+
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
